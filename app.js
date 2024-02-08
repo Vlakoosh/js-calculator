@@ -27,3 +27,6 @@ function evaluateEquation (mathEquation) {
     calculatorScreen.value = evaluate(mathEquation);
 }
 */
+
+
+//still broken - day: 2
