@@ -29,6 +29,7 @@ buttons.forEach(button => {
                     calculatorScreen.value = math.evaluate(mathEquation);
                 } catch (error) {
                     console.error('Error evaluating equation:', error);
+                    console.log('kill yourself')
                 }
                 break;
             case 'trigSinButton':
