@@ -9,7 +9,7 @@
 
 .container {
     display: flex;
-    width: calc(var(--tile-size) * 4 + 2px);
+    width: calc(var(--tile-size) * 6 + 2px);
 
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,7 @@
 .buttons {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(6, auto);
 }
 
 .button {
@@ -51,10 +51,11 @@
 }
 
 #calculatorScreen {
-    width: calc(var(--tile-size) * 4);
+    width: calc(var(--tile-size) * 6);
     height: var(--tile-size);
     resize: none;
     border: 1px solid white;
+    border-radius: 0;
     background-color: #7e7d7d;
     color: #262626;
     margin: 1px;
@@ -68,34 +69,64 @@
 }
 
 #deleteButton,
-#percentButton,
+#backspaceButton,
 #switchSignsButton,
 #divideButton,
 #subtractButton,
 #multiplyButton,
 #addButton,
-#equalsButton {
+#equalsButton,
+#openingBracketButton,
+#closingBracketButton,
+#trigCosButton,
+#trigSinButton,
+#trigTanButton,
+#trigPiButton,
+#naturalLogButton,
+#eButton,
+#squareButton,
+#exponentButton {
     background-color: #575656;
 }
 
 #deleteButton:hover,
-#percentButton:hover,
+#backspaceButton:hover,
 #switchSignsButton:hover,
 #divideButton:hover,
 #subtractButton:hover,
 #multiplyButton:hover,
 #addButton:hover,
-#equalsButton:hover {
+#equalsButton:hover:hover,
+#openingBracketButton:hover,
+#closingBracketButton:hover,
+#trigCosButton:hover,
+#trigSinButton:hover,
+#trigTanButton:hover,
+#trigPiButton:hover,
+#naturalLogButton:hover,
+#eButton:hover,
+#squareButton:hover,
+#exponentButton:hover {
     background-color: #646363;
 }
 
 #deleteButton:active,
-#percentButton:active,
+#backspaceButton:active,
 #switchSignsButton:active,
 #divideButton:active,
 #subtractButton:active,
 #multiplyButton:active,
 #addButton:active,
-#equalsButton:active {
+#equalsButton:active,
+#openingBracketButton:active,
+#closingBracketButton:active,
+#trigCosButton:active,
+#trigSinButton:active,
+#trigTanButton:active,
+#trigPiButton:active,
+#naturalLogButton:active,
+#eButton:active,
+#squareButton:active,
+#exponentButton:active {
     background-color: #424242;
 }
