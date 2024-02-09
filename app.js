@@ -2,7 +2,6 @@
 const buttons = document.querySelectorAll('.button');
 const calculatorScreen = document.querySelector('#calculatorScreen');
 const equalsButton = document.querySelector('.equals');
-const resetButton = document.querySelector('#deleteButton'); 
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -23,8 +22,7 @@ buttons.forEach(button => {
             case 'equalsButton':
                 const mathEquation = calculatorScreen.value;
                 try {
-                    const result = math.evaluate(mathEquation);
-                    calculatorScreen.value = result;
+                    calculatorScreen.value = math.evaluate(mathEquation);
                 } catch (error) {
                     console.error('Error evaluating equation:', error);
                 }
