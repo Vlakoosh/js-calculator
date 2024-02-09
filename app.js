@@ -1,32 +1,29 @@
-/*
-import {
-    atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt
-} from 'mathjs'
-*/
-
 
 const numberButtons = document.querySelectorAll('.button:not(.equals)');
 const calculatorScreen = document.querySelector('#calculatorScreen');
 const equalsButton = document.querySelector('.equals');
+const resetButton = document.querySelector('#deleteButton'); 
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
-        calculatorScreen.value = calculatorScreen.value + button.innerHTML;
-        console.log('button pressed')
-    })
-})
+        calculatorScreen.value += button.innerHTML;
+        console.log('button pressed');
+    });
+});
 
 equalsButton.addEventListener('click', () => {
     const mathEquation = calculatorScreen.value;
-    //evaluateEquation(mathEquation)
-})
+    try {
+        const result = math.evaluate(mathEquation);
+        calculatorScreen.value = result;
+        console.log(result);
+    } catch (error) {
+        console.error('Error evaluating equation:', error);
+    }
+});
 
-/*
-function evaluateEquation (mathEquation) {
-    console.log(evaluate(mathEquation))
-    calculatorScreen.value = evaluate(mathEquation);
-}
-*/
 
-
-//still broken - day: 2
+resetButton.addEventListener('click', () => {
+    calculatorScreen.value = '';
+    console.log('C button pressed (reset)');
+});
